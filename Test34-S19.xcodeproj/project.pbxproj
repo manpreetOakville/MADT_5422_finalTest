@@ -19,6 +19,8 @@
 		9BE2D7AE22BA71FA00F822BA /* Level2.sks in Resources */ = {isa = PBXBuildFile; fileRef = 9BE2D7AD22BA71FA00F822BA /* Level2.sks */; };
 		9BE2D7B022BA72C000F822BA /* Level3.sks in Resources */ = {isa = PBXBuildFile; fileRef = 9BE2D7AF22BA72C000F822BA /* Level3.sks */; };
 		9BE2D7B222BA734700F822BA /* Level3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE2D7B122BA734700F822BA /* Level3.swift */; };
+		9BEAC33922BA7A31005D5A40 /* leg.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BEAC33822BA7A31005D5A40 /* leg.png */; };
+		9BEAC33B22BA7A36005D5A40 /* hair.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BEAC33A22BA7A36005D5A40 /* hair.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		9BE2D7AD22BA71FA00F822BA /* Level2.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level2.sks; sourceTree = "<group>"; };
 		9BE2D7AF22BA72C000F822BA /* Level3.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level3.sks; sourceTree = "<group>"; };
 		9BE2D7B122BA734700F822BA /* Level3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level3.swift; sourceTree = "<group>"; };
+		9BEAC33822BA7A31005D5A40 /* leg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = leg.png; path = ../../leg.png; sourceTree = "<group>"; };
+		9BEAC33A22BA7A36005D5A40 /* hair.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = hair.png; path = ../../hair.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +80,8 @@
 				9BE2D79B22BA620C00F822BA /* GameViewController.swift */,
 				9BE2D79D22BA620C00F822BA /* Main.storyboard */,
 				9BE2D7A022BA621700F822BA /* Assets.xcassets */,
+				9BEAC33A22BA7A36005D5A40 /* hair.png */,
+				9BEAC33822BA7A31005D5A40 /* leg.png */,
 				9BE2D7A222BA621700F822BA /* LaunchScreen.storyboard */,
 				9BE2D7A522BA621700F822BA /* Info.plist */,
 				9BE2D7AD22BA71FA00F822BA /* Level2.sks */,
@@ -145,6 +151,8 @@
 			files = (
 				9BE2D79F22BA620C00F822BA /* Main.storyboard in Resources */,
 				9BE2D7AE22BA71FA00F822BA /* Level2.sks in Resources */,
+				9BEAC33B22BA7A36005D5A40 /* hair.png in Resources */,
+				9BEAC33922BA7A31005D5A40 /* leg.png in Resources */,
 				9BE2D79622BA620C00F822BA /* GameScene.sks in Resources */,
 				9BE2D7A122BA621700F822BA /* Assets.xcassets in Resources */,
 				9BE2D7B022BA72C000F822BA /* Level3.sks in Resources */,
