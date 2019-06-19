@@ -1,10 +1,12 @@
 import SpriteKit
 import GameplayKit
 
-class Level3: SKScene {
+class Level3: SKScene, SKPhysicsContactDelegate {
     
-    let lemming = SKSpriteNode(imageNamed: "lemming")
-  
+    let entrance = SKSpriteNode(imageNamed: "entrance")
+   let platform = SKSpriteNode(imageNamed: "platform")
+    let exit = SKSpriteNode(imageNamed: "exit")
+   
     
     var timeOfLastUpdate:TimeInterval = 0
     var dt: TimeInterval = 0
@@ -21,53 +23,52 @@ class Level3: SKScene {
         
         // SPRITES
         // ---------------------
-       lemming.position = CGPoint(x:self.size.width*0.25, y:self.size.height/2)
-        //square.position = CGPoint(x:self.size.width/2, y:self.size.height/2)
-        //triangle.position = CGPoint(x:self.size.width*0.75, y:self.size.height/2)
+        entrance.position = CGPoint(x:self.size.width*0.25, y:self.size.height/2)
+        platform.position = CGPoint(x:self.size.width/2, y:self.size.height/2)
+        exit.position = CGPoint(x:self.size.width*0.75, y:self.size.height/2)
         
         // add physics to circle
-        lemming.physicsBody = SKPhysicsBody(circleOfRadius: lemming.size.width / 2)
-        self.lemming.physicsBody?.affectedByGravity = false
+        entrance.physicsBody = SKPhysicsBody(circleOfRadius: entrance.size.width / 2)
+        self.entrance.physicsBody?.affectedByGravity = false
         
         // add physics to square
-       // self.square.physicsBody = SKPhysicsBody(rectangleOf:self.square.frame.size)
+        self.platform.physicsBody = SKPhysicsBody(rectangleOf:self.platform.frame.size)
         
         // add physics to triangle
-       // self.triangle.physicsBody = SKPhysicsBody(rectangleOf:self.triangle.frame.size)
+        self.exit.physicsBody = SKPhysicsBody(rectangleOf:self.exit.frame.size)
         
-       //
-        // add L
-        //self.lshape.name = "shape"
-       // self.lshape.position = CGPoint(x: self.size.width * 0.5,
-                                //       y: self.size.height * 0.75)
-       // self.lshape.physicsBody = SKPhysicsBody(texture: self.lshape.texture!, size: self.lshape.size)
+        self.exit.physicsBody?.affectedByGravity = false
         
-        addChild(lemming)
-        
+     
+      
+        addChild(entrance)
+        addChild(platform)
+        addChild(exit)
+       
     }
-    func spawnlemming() {
-        let lemming = SKSpriteNode(imageNamed:"lemming")
+    func spawnSand() {
+        let sand = SKSpriteNode(imageNamed:"sand")
         
         // put sand at a random (x,y) position
         let x = self.size.width/2
         let y = self.size.height - 100
-        lemming.position.x = x
-        lemming.position.y = y
+        sand.position.x = x
+        sand.position.y = y
         
         // add physics
-        lemming.physicsBody = SKPhysicsBody(circleOfRadius: lemming.size.width / 2)
-        self.lemming.physicsBody?.affectedByGravity = true
+        sand.physicsBody = SKPhysicsBody(circleOfRadius: sand.size.width / 2)
+        self.entrance.physicsBody?.affectedByGravity = true
         
-        addChild(lemming)
+        addChild(sand)
     }
     
     
     override func update(_ currentTime: TimeInterval) {
         // make new sand every 10ms
         self.dt = currentTime - timeOfLastUpdate
-        if (self.dt >= 0.1) {
+        if (self.dt >= 2) {
             timeOfLastUpdate = currentTime
-            self.spawnlemming()
+            self.spawnSand()
         }
         
         

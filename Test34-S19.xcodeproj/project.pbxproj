@@ -22,6 +22,7 @@
 		9BEAC33922BA7A31005D5A40 /* leg.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BEAC33822BA7A31005D5A40 /* leg.png */; };
 		9BEAC33B22BA7A36005D5A40 /* hair.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BEAC33A22BA7A36005D5A40 /* hair.png */; };
 		9BEAC33D22BA7E8B005D5A40 /* frame-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BEAC33C22BA7E8B005D5A40 /* frame-1.png */; };
+		9BEAC33F22BA8CE7005D5A40 /* frame-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BEAC33E22BA8CE7005D5A40 /* frame-1.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		9BEAC33822BA7A31005D5A40 /* leg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = leg.png; path = ../../leg.png; sourceTree = "<group>"; };
 		9BEAC33A22BA7A36005D5A40 /* hair.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = hair.png; path = ../../hair.png; sourceTree = "<group>"; };
 		9BEAC33C22BA7E8B005D5A40 /* frame-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "frame-1.png"; path = "../../frame-1.png"; sourceTree = "<group>"; };
+		9BEAC33E22BA8CE7005D5A40 /* frame-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "frame-1.png"; path = "../../frame-1.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 				9BE2D79D22BA620C00F822BA /* Main.storyboard */,
 				9BE2D7A022BA621700F822BA /* Assets.xcassets */,
 				9BEAC33C22BA7E8B005D5A40 /* frame-1.png */,
+				9BEAC33E22BA8CE7005D5A40 /* frame-1.png */,
 				9BEAC33A22BA7A36005D5A40 /* hair.png */,
 				9BEAC33822BA7A31005D5A40 /* leg.png */,
 				9BE2D7A222BA621700F822BA /* LaunchScreen.storyboard */,
@@ -159,6 +162,7 @@
 				9BE2D79622BA620C00F822BA /* GameScene.sks in Resources */,
 				9BEAC33D22BA7E8B005D5A40 /* frame-1.png in Resources */,
 				9BE2D7A122BA621700F822BA /* Assets.xcassets in Resources */,
+				9BEAC33F22BA8CE7005D5A40 /* frame-1.png in Resources */,
 				9BE2D7B022BA72C000F822BA /* Level3.sks in Resources */,
 				9BE2D7A422BA621700F822BA /* LaunchScreen.storyboard in Resources */,
 				9BE2D79822BA620C00F822BA /* Actions.sks in Resources */,
