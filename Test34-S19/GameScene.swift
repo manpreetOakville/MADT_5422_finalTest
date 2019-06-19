@@ -27,8 +27,7 @@ class GameScene: SKScene {
         self.hair3 = self.childNode(withName: "hair2") as! SKSpriteNode
         self.hair2 = self.childNode(withName: "hair3") as! SKSpriteNode
         self.hair1 = self.childNode(withName: "hair4") as! SKSpriteNode
-       // self.lifes = self.childNode(withName: "lifes") as! SKLabelNode
-       // lifes.text = "lifes : \(lifes)"
+      
     }
     
     override func update(_ currentTime: TimeInterval) {
@@ -97,25 +96,17 @@ class GameScene: SKScene {
         }
         
         print("all names = \(Names)")
-        if(Names == "hair1hair2hair3hair4")
+        if(Names == "hair1 hair2 hair3 hair4")
         {
             print("Player wins")
             
-            hair4.removeFromParent()
+            hair4.removeFromParent() ; hair4.isHidden = true;
             
-            hair4.isHidden = true;
+            hair3.removeFromParent() ; hair3.isHidden = true
             
-            hair3.removeFromParent()
+            hair2.removeFromParent() ; hair2.isHidden = true
             
-            hair3.isHidden = true
-            
-            hair2.removeFromParent()
-            
-            hair2.isHidden = true
-            
-            hair1.removeFromParent()
-            
-            hair1.isHidden = true
+            hair1.removeFromParent(); hair1.isHidden = true
            
             
             
@@ -166,8 +157,7 @@ class GameScene: SKScene {
             }
             else
             {
-               // self.life = life - 5
-               // self.lifes.text = "Lifes : \(lifes)"
+              
                 print("Lifes : \(life)")
                 sleep(6)
                 let scene = SKScene(fileNamed:"Level2")
