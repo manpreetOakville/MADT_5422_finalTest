@@ -20,6 +20,20 @@ class GameScene: SKScene {
     }
     
     override func update(_ currentTime: TimeInterval) {
+        
+        
+        
+        let Level2Scene = SKScene(fileNamed:"Level2")
+        Level2Scene!.scaleMode = .aspectFill
+        let flipTransition = SKTransition.flipVertical(withDuration: 2)
+        self.scene?.view?.presentScene(
+            Level2Scene!,
+            transition: flipTransition)
+        
+        
+        
+        
+        
         // Called before each frame is rendered
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -46,6 +60,6 @@ class GameScene: SKScene {
                 view?.presentScene(scene!)
             }
         }
-        
+       
     }
 }

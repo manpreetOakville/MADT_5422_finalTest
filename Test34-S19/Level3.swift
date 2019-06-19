@@ -3,45 +3,74 @@ import GameplayKit
 
 class Level3: SKScene {
     
-    var nextLevelButton:SKLabelNode!
+    let lemming = SKSpriteNode(imageNamed: "lemming")
+  
     
+    var timeOfLastUpdate:TimeInterval = 0
+    var dt: TimeInterval = 0
     
     override func didMove(to view: SKView) {
-        print("Loaded level 3")
+        // THE GAME SCENE
+        // ---------------------
+        // set the physics properties of this world
         
-        self.nextLevelButton = self.childNode(withName: "nextLevelButton") as! SKLabelNode
+        
+        // set boundaries around the scene
+        self.physicsBody = SKPhysicsBody(edgeLoopFrom: self.frame)
+        
+        
+        // SPRITES
+        // ---------------------
+       lemming.position = CGPoint(x:self.size.width*0.25, y:self.size.height/2)
+        //square.position = CGPoint(x:self.size.width/2, y:self.size.height/2)
+        //triangle.position = CGPoint(x:self.size.width*0.75, y:self.size.height/2)
+        
+        // add physics to circle
+        lemming.physicsBody = SKPhysicsBody(circleOfRadius: lemming.size.width / 2)
+        self.lemming.physicsBody?.affectedByGravity = false
+        
+        // add physics to square
+       // self.square.physicsBody = SKPhysicsBody(rectangleOf:self.square.frame.size)
+        
+        // add physics to triangle
+       // self.triangle.physicsBody = SKPhysicsBody(rectangleOf:self.triangle.frame.size)
+        
+       //
+        // add L
+        //self.lshape.name = "shape"
+       // self.lshape.position = CGPoint(x: self.size.width * 0.5,
+                                //       y: self.size.height * 0.75)
+       // self.lshape.physicsBody = SKPhysicsBody(texture: self.lshape.texture!, size: self.lshape.size)
+        
+        addChild(lemming)
+        
+    }
+    func spawnlemming() {
+        let lemming = SKSpriteNode(imageNamed:"lemming")
+        
+        // put sand at a random (x,y) position
+        let x = self.size.width/2
+        let y = self.size.height - 100
+        lemming.position.x = x
+        lemming.position.y = y
+        
+        // add physics
+        lemming.physicsBody = SKPhysicsBody(circleOfRadius: lemming.size.width / 2)
+        self.lemming.physicsBody?.affectedByGravity = true
+        
+        addChild(lemming)
     }
     
+    
     override func update(_ currentTime: TimeInterval) {
-        // Called before each frame is rendered
-    }
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        let touch = touches.first
-        if (touch == nil) {
-            return
+        // make new sand every 10ms
+        self.dt = currentTime - timeOfLastUpdate
+        if (self.dt >= 0.1) {
+            timeOfLastUpdate = currentTime
+            self.spawnlemming()
         }
         
-        let location = touch!.location(in:self)
-        let node = self.atPoint(location)
-        
-        
-        
-        
-        // MARK: Switch Levels
-        // This is level 3, so i made it go back to level 1
-        // Change it if you want
-        if (node.name == "nextLevelButton") {
-            let scene = SKScene(fileNamed:"GameScene")
-            if (scene == nil) {
-                print("Error loading level")
-                return
-            }
-            else {
-                scene!.scaleMode = .aspectFill
-                view?.presentScene(scene!)
-            }
-        }
- 
         
     }
 }
+
