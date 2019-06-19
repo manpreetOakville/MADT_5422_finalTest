@@ -6,6 +6,7 @@ class Level3: SKScene, SKPhysicsContactDelegate {
     let entrance = SKSpriteNode(imageNamed: "entrance")
    let platform = SKSpriteNode(imageNamed: "platform")
     let exit = SKSpriteNode(imageNamed: "exit")
+    
    
     
     var timeOfLastUpdate:TimeInterval = 0
@@ -66,12 +67,29 @@ class Level3: SKScene, SKPhysicsContactDelegate {
     override func update(_ currentTime: TimeInterval) {
         // make new sand every 10ms
         self.dt = currentTime - timeOfLastUpdate
+        
+        
+       
         if (self.dt >= 2) {
             timeOfLastUpdate = currentTime
             self.spawnSand()
         }
         
         
+        // MARK: Switch Levels
+       
+        
+        //if (node.name == "nextLevelButton") {
+            let scene = SKScene(fileNamed:"Level1")
+            if (scene == nil) {
+                print("Error loading level")
+                return
+            }
+            else {
+                scene!.scaleMode = .aspectFill
+                view?.presentScene(scene!)
+        
     }
 }
 
+}
