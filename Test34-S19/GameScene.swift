@@ -35,7 +35,7 @@ class GameScene: SKScene {
         
         
         // MARK: Switch Levels
-        if (node.name == "nextLevelButton") {
+        if (node.name == "NextLevelButton") {
             let scene = SKScene(fileNamed:"Level2")
             if (scene == nil) {
                 print("Error loading levels")
