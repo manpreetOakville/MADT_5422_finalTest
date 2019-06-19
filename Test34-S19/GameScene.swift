@@ -38,7 +38,7 @@ class GameScene: SKScene {
         if (node.name == "nextLevelButton") {
             let scene = SKScene(fileNamed:"Level2")
             if (scene == nil) {
-                print("Error loading level")
+                print("Error loading levels")
                 return
             }
             else {
