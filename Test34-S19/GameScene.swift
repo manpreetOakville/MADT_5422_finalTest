@@ -27,8 +27,8 @@ class GameScene: SKScene {
         self.hair3 = self.childNode(withName: "hair2") as! SKSpriteNode
         self.hair2 = self.childNode(withName: "hair3") as! SKSpriteNode
         self.hair1 = self.childNode(withName: "hair4") as! SKSpriteNode
-        self.lifes = self.childNode(withName: "lifes") as! SKLabelNode
-        lifes.text = "lifes : \(lifes)"
+       // self.lifes = self.childNode(withName: "lifes") as! SKLabelNode
+       // lifes.text = "lifes : \(lifes)"
     }
     
     override func update(_ currentTime: TimeInterval) {
@@ -166,8 +166,8 @@ class GameScene: SKScene {
             }
             else
             {
-                self.life = life - 5
-                self.lifes.text = "Lifes : \(lifes)"
+               // self.life = life - 5
+               // self.lifes.text = "Lifes : \(lifes)"
                 print("Lifes : \(life)")
                 sleep(6)
                 let scene = SKScene(fileNamed:"Level2")
